@@ -7,6 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lab4.chooseCabel.models.ChooseCableInputModel
 import com.example.lab4.chooseCabel.models.ChooseCableResultModel
 import com.example.lab4.ui.theme.Lab4Theme
@@ -14,7 +15,7 @@ import androidx.compose.runtime.livedata.observeAsState
 
 
 @Composable
-fun ChooseCableView(viewModel: ChooseCableViewModel) {
+fun ChooseCableView(viewModel: ChooseCableViewModel = viewModel()) {
     val inputData by viewModel.inputData.observeAsState(ChooseCableInputModel())
     val resultData by viewModel.resultData.observeAsState(ChooseCableResultModel())
     val openDialog = remember { mutableStateOf(false) }

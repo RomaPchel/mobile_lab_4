@@ -36,12 +36,12 @@ fun Home(navController: NavHostController){
                     Text("Обрати кабель")
                 }
                 Spacer(modifier = Modifier.height(16.dp))
-                Button(onClick = { navController.navigate("screen2") }) {
-                    Text("Navigate to Screen 2")
+                Button(onClick = { navController.navigate("calculateCurrentOn10") }) {
+                    Text("Визначити струми на шинах 10кв")
                 }
                 Spacer(modifier = Modifier.height(16.dp))
-                Button(onClick = { navController.navigate("screen3") }) {
-                    Text("Navigate to Screen 3")
+                Button(onClick = { navController.navigate("calculateCurrent") }) {
+                    Text("Визначити струми")
                 }
             }
         }

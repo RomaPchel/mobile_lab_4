@@ -17,7 +17,7 @@ import androidx.compose.runtime.livedata.observeAsState
 import com.example.lab4.ui.theme.Lab4Theme
 
 @Composable
-fun CalculateCurrentOnTenScreen(viewModel: CalculateCurrentOnTenViewModel = viewModel()) {
+fun CalculateCurrentOnTenView(viewModel: CalculateCurrentOnTenViewModel = viewModel()) {
     val inputData by viewModel.inputData.observeAsState(CalculateCurrentOnTenInputModel())
     val resultData by viewModel.resultData.observeAsState(CalculateCurrentOnTenResultModel())
     val openDialog = remember { mutableStateOf(false) }
@@ -98,12 +98,6 @@ fun CalculateCurrentOnTenScreen(viewModel: CalculateCurrentOnTenViewModel = view
 @Composable
 fun CalculateCurrentOnTenScreenPreview() {
     Lab4Theme {
-        CalculateCurrentOnTenScreen()
+        CalculateCurrentOnTenView()
     }
-}
-
-
-@Composable
-fun Screen3() {
-
 }

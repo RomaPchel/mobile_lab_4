@@ -23,6 +23,7 @@ class ChooseCableViewModel : ViewModel() {
             chooseCableInputData.value!!.tf,
             chooseCableInputData.value!!.ct
         )
+        chooseCableResultData.value = ChooseCableResultModel(Im, Impa, Sek, s)
     }
 
     private fun calculateIm(Sm: Double, Unom: Double): Double {

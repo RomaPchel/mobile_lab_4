@@ -24,6 +24,7 @@ class CalculateCurrentOnTenViewModel : ViewModel() {
         )
         val X: Double = calculateX(Xc, Xt)
         val Ip0: Double = calculateIp0(calculateCurrentInputData.value!!.Uch, X)
+        resultData.value = CalculateCurrentOnTenResultModel(Xc, Xt, X, Ip0)
     }
 
     fun updateSk(value: Double) {
